@@ -1,18 +1,10 @@
-using Book.Api.Repositories;
-using Book.Api.Repositories.InMemortCache;
-using Book.Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Persistence;
 
 namespace Book.Api
 {
@@ -29,17 +21,8 @@ namespace Book.Api
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddEasyCaching(options =>
-            {
-                options.UseInMemory("default");
-            });            
-            services.AddStackExchangeRedisCache(options =>
-            {
-                options.Configuration = Configuration.GetValue<string>("CacheSettings:ConnectionString");
-            });
-            services.AddScoped<IRedisBookRepository, RedisBookRepository>();
-            services.AddScoped<IInMemoryCacheRepository, InMemoryCacheRepository>();
-            services.AddScoped<IBookService, BookService>();
+            services.AddApplication();
+            services.AddPersistence(Configuration);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

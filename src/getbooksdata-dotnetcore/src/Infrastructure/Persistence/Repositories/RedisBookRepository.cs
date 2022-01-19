@@ -1,4 +1,5 @@
-﻿using Book.Api.Entities;
+﻿using Core.Application.Repositories;
+using Core.Domain.Entities;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 using System;
@@ -6,7 +7,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Book.Api.Repositories
+namespace Persistence.Repositories
 {
     public class RedisBookRepository : IRedisBookRepository
     {

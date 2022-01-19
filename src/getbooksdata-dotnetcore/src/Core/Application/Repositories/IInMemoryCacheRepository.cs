@@ -1,10 +1,7 @@
-﻿using Book.Api.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Core.Domain.Entities;
 using System.Threading.Tasks;
 
-namespace Book.Api.Repositories.InMemortCache
+namespace Core.Application.Repositories
 {
     public interface IInMemoryCacheRepository
     {

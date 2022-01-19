@@ -1,13 +1,10 @@
-﻿using Book.Api.Entities;
+﻿using Core.Application.Repositories;
+using Core.Domain.Entities;
 using EasyCaching.Core;
-using Microsoft.Extensions.Caching.Memory;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
-namespace Book.Api.Repositories.InMemortCache
+namespace Persistence.Repositories
 {
     public class InMemoryCacheRepository : IInMemoryCacheRepository
     {

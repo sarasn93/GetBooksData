@@ -1,10 +1,7 @@
-﻿using Book.Api.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Core.Domain.Entities;
 using System.Threading.Tasks;
 
-namespace Book.Api.Repositories
+namespace Core.Application.Repositories
 {
     public interface IRedisBookRepository
     {

@@ -1,15 +1,8 @@
-﻿using Book.Api.Entities;
-using Book.Api.Repositories;
-using Book.Api.Services;
+﻿using Core.Domain.Entities;
+using Core.Application.Services;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using RestSharp;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace Book.Api.Controllers
