@@ -16,8 +16,6 @@ namespace Book.ApiTest
     {
         private readonly List<BasicBookData> _books;
 
-        private readonly IRedisBookRepository _redis;
-        private readonly IInMemoryCacheRepository _cache;
         public BookServiceFake()
         {
             _books = new List<BasicBookData>()
